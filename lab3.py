@@ -35,3 +35,29 @@ def factorial(n):
 
 # Test the recursive function
 print("Factorial of Seed Digit:", factorial(SEED_DIGIT))
+# [CELL 4] PARAMETRIC PROCESSING
+
+def user_summary(title, *scores, **info):
+    print(f"=== {title} ===")
+
+    total = sum(scores)
+    average = total / len(scores)
+
+    print("Scores:", scores)
+    print("Total:", total)
+    print("Average:", round(average, 2))
+
+    for k, v in info.items():
+        print(f"{k}: {v}")
+
+    return average
+
+# Example call
+avg = user_summary(
+    f"{LAST_NAME} Academic Report",
+    SEED_DIGIT * 10,
+    ID_SUM,
+    NAME_LENGTH * 5,
+    id=STUDENT_ID,
+    surname=LAST_NAME
+)

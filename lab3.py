@@ -60,4 +60,30 @@ avg = user_summary(
     NAME_LENGTH * 5,
     id=STUDENT_ID,
     surname=LAST_NAME
-)
+)# [CELL 5] RETURN MECHANISM
+
+def compute_area(radius):
+    return 3.1416 * radius**2
+
+area = compute_area(SEED_DIGIT + 2)
+print("Computed Area:", round(area, 2))
+# [CELL 6] SAFE CALCULATOR
+
+def safe_calculator(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        result = "UNDEFINED"
+    return result
+
+print("Calculation Result:", safe_calculator(ID_SUM, SEED_DIGIT))
+# [CELL 6] SAFE CALCULATOR
+
+def safe_calculator(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        result = "UNDEFINED"
+    return result
+
+print("Calculation Result:", safe_calculator(ID_SUM, SEED_DIGIT))
